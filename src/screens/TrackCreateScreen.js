@@ -8,6 +8,7 @@ import Map from '../components/Map'
 import useLocation from '../hook/useLocation';
 import TrackForm from '../components/TrackForm';
 import Spacer from '../components/Spacer';
+import { FontAwesome} from '@expo/vector-icons';
 
 const TrackCreateScreen = ({ isFocused }) => {
 
@@ -25,6 +26,11 @@ const TrackCreateScreen = ({ isFocused }) => {
             {error? <Text>Please enable location services.</Text> : null}
         </SafeAreaView>);
 };
+
+TrackCreateScreen.navigationOptions = {
+    title: 'Add Track',
+    tabBarIcon: <FontAwesome name='plus' size={20} />
+}
 
 const styles = StyleSheet.create({});
 
